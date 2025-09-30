@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace IFSPStore.Domain.Base
 {
-    public abstract class BaseEntity<TIF> : IBaseEntity
+    public abstract class BaseEntity<TId> : IBaseEntity
     {
+        protected BaseEntity(TId id) {
+            Id = id;
+        }
+
+        public TId Id { get; set; }
     }
 }
