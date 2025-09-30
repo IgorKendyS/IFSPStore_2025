@@ -1,12 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using IFSPStore.Domain.Base;
 
 namespace IFSPStore.Domain.Entities
 {
-    class Customer
+    public class Customer : BaseEntity<int>
     {
+        public Customer(int id, string name, string address, string document, string neighborhood, City city) : base(id)
+        {
+            Name = name;
+            Address = address;
+            Document = document;
+            Neighborhood = neighborhood;
+            City = city;
+        }
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public string Document { get; set; }
+        public string Neighborhood { get; set; }
+        public City City { get; set; }
     }
 }

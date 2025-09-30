@@ -1,23 +1,18 @@
 ﻿using IFSPStore.Domain.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IFSPStore.Domain.Entities
 {
     public class City : BaseEntity<int>
     {
 
-        public City (int id, string nome, string estado) : base(id)
+        public City (int id, string name, string state) : base(id)
         {
-            Nome = nome;
-            Estado = estado;
+            Name = name;
+            State = state;
         }
 
-        public string Nome { get; set; }
+        public string Name { get; set; }
 
-        public string Estado { get; set; }
+        public string State { get; set; }
     }
 }
