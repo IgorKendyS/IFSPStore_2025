@@ -4,21 +4,21 @@ namespace IFSPStore.Domain.Entities
 {
     public class Product : BaseEntity<int>
     {
-        public Product (int id, string name, decimal price, float quantity, DateOnly buyDate, string unitSold, Group group) : base(id)
+        public Product (int id, string name, decimal price, decimal  quantity, DateTime buyDate, string unitSold, Category category) : base(id)
         {
             Name = name;
             Price = price;
             Quantity = quantity;
             BuyDate = buyDate;
             UnitSold = unitSold;
-            Group = group;
+            Category = category;
         }
 
         public string Name { get; set; }
         public decimal Price { get; set; }
-        public float Quantity { get; set; }
-        public DateOnly BuyDate { get; set; }
+        public decimal Quantity { get; set; }
+        public DateTime BuyDate { get; set; }
         public string UnitSold { get; set; }
-        public Group Group { get; set; }
+        public Category Category { get; set; }
     }
 }

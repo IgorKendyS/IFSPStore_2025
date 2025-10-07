@@ -4,7 +4,7 @@ namespace IFSPStore.Domain.Entities
 {
     public class User : BaseEntity<int>
     {
-        public User(int id, string name, string password, string login, string email, DateTime registerDate, DateTime loginDate, bool active) : base(id)
+        public User(int id, string name, string password, string login, string email, DateTime registerDate, DateTime loginDate, bool isActive) : base(id)
         {
             Name = name;
             Password = password;
@@ -12,7 +12,7 @@ namespace IFSPStore.Domain.Entities
             Email = email;
             RegisterDate = registerDate;
             LoginDate = loginDate;
-            Active = active;
+            IsActive = isActive;
         }
 
         public string Name { get; set; }
@@ -21,6 +21,6 @@ namespace IFSPStore.Domain.Entities
         public string Email { get; set; }
         public DateTime RegisterDate { get; set; }
         public DateTime LoginDate { get; set; }
-        public bool Active { get; set; }
+        public bool IsActive { get; set; }
     }
 }
